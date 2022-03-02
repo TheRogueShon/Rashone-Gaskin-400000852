@@ -2,10 +2,10 @@ const { Builder, By, Key, NoSuchElementError } = require("selenium-webdriver");
 const firefox = require('selenium-webdriver/firefox');
 
 async function runTests(){
-    homeTest();
+    //homeTest();
     //aboutTest();
     //ordertaxiTest();
-    //contactTest();
+    contactTest();
 }
 
 async function homeTest(){
@@ -13,11 +13,11 @@ async function homeTest(){
                                 .setFirefoxOptions(new firefox.Options().headless())
                                 .build();
 
-   /* await driver.get('http://127.0.0.1/taxiApp/index.php');
+    await driver.get('http://127.0.0.1/taxiApp/index.php');
 
     let found = await driver.findElement(By.id("DateTime"));
 
-    driver.quit(); */
+    driver.quit(); 
 }
 
 async function aboutTest(){
