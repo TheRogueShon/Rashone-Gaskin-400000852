@@ -9,7 +9,9 @@ async function runTests(){
 }
 
 async function homeTest(){
-    let driver = new Builder().forBrowser('firefox').build();
+    let driver = new Builder().forBrowser('firefox')
+                                .setFirefoxOptions(new firefox.Options().headless())
+                                .build();
 
    /* await driver.get('http://127.0.0.1/taxiApp/index.php');
 
