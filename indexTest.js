@@ -2,8 +2,8 @@ const { Builder, By, Key, NoSuchElementError } = require("selenium-webdriver");
 const firefox = require('selenium-webdriver/firefox');
 
 async function runTests(){
-    //homeTest();
-    aboutTest();
+    homeTest();
+    //aboutTest();
     //ordertaxiTest();
     //contactTest();
 }
