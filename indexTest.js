@@ -11,11 +11,11 @@ async function runTests(){
 async function homeTest(){
     let driver = new Builder().forBrowser('firefox').build();
 
-    await driver.get('http://127.0.0.1/taxiApp/index.php');
+   /* await driver.get('http://127.0.0.1/taxiApp/index.php');
 
     let found = await driver.findElement(By.id("DateTime"));
 
-    driver.quit();
+    driver.quit(); *.
 }
 
 async function aboutTest(){
