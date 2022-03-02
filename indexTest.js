@@ -15,7 +15,7 @@ async function homeTest(){
 
     let found = await driver.findElement(By.id("DateTime"));
 
-    driver.quit(); *.
+    driver.quit(); */
 }
 
 async function aboutTest(){
