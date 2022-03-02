@@ -61,9 +61,10 @@
             <span class="visually-hidden">Next</span>
         </a>
     </div>
-    <div id="DateTime">8:00pm</div>
+    <div id="DateTime">Monday, 9th March 8:00am</div>
     
 </body>
+</script>
 <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
