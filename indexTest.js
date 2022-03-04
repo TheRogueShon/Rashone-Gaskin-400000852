@@ -2,10 +2,10 @@ const { Builder, By, Key, NoSuchElementError } = require("selenium-webdriver");
 const firefox = require('selenium-webdriver/firefox');
 
 async function runTests(){
-    homeTest();
-    aboutTest();
-    ordertaxiTest();
-    contactTest();
+    await homeTest();
+    await aboutTest();
+    await ordertaxiTest();
+    await contactTest();
 }
 
 async function homeTest(){
@@ -17,7 +17,7 @@ async function homeTest(){
 
     let found = await driver.findElement(By.id("DateTime"));
 
-    driver.quit(); 
+    await driver.quit(); 
 }
 
 async function aboutTest(){
@@ -27,15 +27,16 @@ async function aboutTest(){
 
     await driver.get('http://127.0.0.1/taxiApp/aboutus.php');
     
-    //let textDemo = driver.findElement(By.xpath("//*[text()='Welcome to islandMovers']"));
-    
-    
-    if(textDemo.isDisplayed())
-        console.log("Element found using text");
-    else
-        console.log("Element not found"); 
-    
-    driver.quit();
+    let welcome = await driver.findElement(By.id("Welcome"));
+    let welcomeText = await welcome.getText();
+    if(welcomeText == 'Welcome to islandMovers'){
+        console.log("Text found");
+    }
+    else{
+        console.log("Text not found");
+    }
+
+    await driver.quit();
 }
 
 async function ordertaxiTest(){
@@ -55,7 +56,7 @@ async function ordertaxiTest(){
     vanImage = await driver.findElement(By.xpath("//img[@alt='Van image']"));
     busImage = await driver.findElement(By.xpath("//img[@alt='Bus image']"));
     truckImage = await driver.findElement(By.xpath("//img[@alt='Truck image']"));
-    driver.quit();
+    await driver.quit();
 }
 
 async function contactTest(){
@@ -65,10 +66,10 @@ async function contactTest(){
 
     await driver.get('http://127.0.0.1/taxiApp/contact.php');
 
-    let form = driver.findElement(By.css('form'));
-    let name = driver.findElement(By.css('#Name'));
-    let query = driver.findElement(By.css('#Query'))
-    let submit = driver.findElement(By.css('#submitQuery'));
+    let form = await driver.findElement(By.css('form'));
+    let name = await driver.findElement(By.css('#Name'));
+    let query = await driver.findElement(By.css('#Query'))
+    let submit = await driver.findElement(By.css('#submitQuery'));
     
     await submit.click();
     await driver.quit();
