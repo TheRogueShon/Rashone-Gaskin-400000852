@@ -27,7 +27,7 @@ async function aboutTest(){
 
     await driver.get('http://127.0.0.1/taxiApp/aboutus.php');
     
-    let textDemo = driver.findElement(By.xpath("//*[text()='Welcome to islandMovers']"));
+    //let textDemo = driver.findElement(By.xpath("//*[text()='Welcome to islandMovers']"));
     
     
     if(textDemo.isDisplayed())
