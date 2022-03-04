@@ -2,9 +2,9 @@ const { Builder, By, Key, NoSuchElementError } = require("selenium-webdriver");
 const firefox = require('selenium-webdriver/firefox');
 
 async function runTests(){
-    //homeTest();
-    //aboutTest();
-    //ordertaxiTest();
+    homeTest();
+    aboutTest();
+    ordertaxiTest();
     contactTest();
 }
 
@@ -21,23 +21,27 @@ async function homeTest(){
 }
 
 async function aboutTest(){
-    let driver = new Builder().forBrowser('firefox').build();
+    let driver = new Builder().forBrowser('firefox')
+                                .setFirefoxOptions(new firefox.Options().headless())                            
+                                .build();
 
     await driver.get('http://127.0.0.1/taxiApp/aboutus.php');
-    /*
+    
     let textDemo = driver.findElement(By.xpath("//*[text()='Welcome to islandMovers']"));
     
     
     if(textDemo.isDisplayed())
         console.log("Element found using text");
     else
-        console.log("Element not found"); */
+        console.log("Element not found"); 
     
     driver.quit();
 }
 
 async function ordertaxiTest(){
-    let driver = new Builder().forBrowser('firefox').build();
+    let driver = new Builder().forBrowser('firefox')
+                                .setFirefoxOptions(new firefox.Options().headless())                            
+                                .build();
 
     await driver.get('http://127.0.0.1/taxiApp/ordertaxi.php');
 
@@ -55,7 +59,9 @@ async function ordertaxiTest(){
 }
 
 async function contactTest(){
-    let driver = new Builder().forBrowser('firefox').build();
+    let driver = new Builder().forBrowser('firefox')
+                                .setFirefoxOptions(new firefox.Options().headless())                            
+                                .build();
 
     await driver.get('http://127.0.0.1/taxiApp/contact.php');
 

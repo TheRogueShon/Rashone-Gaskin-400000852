@@ -52,10 +52,10 @@
         <button type="submit" id="submitQuery" class="btn btn-primary" onclick="alert();">Submit</button>
     </form>
     </div>
- <!--   <script>
+    <script>
         function alert(){
             alert("Thank you for your submission");
         }
-    </script> -->
+    </script>
 </body>
 </html>
