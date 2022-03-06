@@ -1,0 +1,61 @@
+doctype html 
+html(lang='en')
+    head    
+        title= title 
+        style   
+            include ../node_modules/bootstrap/dist/css/bootstrap.css
+    body    
+        nav(class="navbar navbar-expand-lg navbar-light bg-light")
+            button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="navbarLinks" aria-expanded="false" aria-label="Toggle navigation")
+                span(class="navbar-toggler-icon")
+            div(class="collapse navbar-collapse" id="navbarLinks")
+                ul(class="navbar-nav mr-auto")
+                    li(class="nav-item")
+                        a(href="/" class="nav-link") Home
+                    li(class="nav-item")
+                        a(href="/aboutus" class="nav-link") About Us
+                    li(class="nav-item active")
+                        a(href="/orderTaxi" class="nav-link") Taxi
+                    li(class="nav-item")
+                        a(href="/contact" class="nav-link") Contact
+        div(class="container m-5")
+            div(class="card")
+                div(class="row")
+                    div(class="col-7 col-sm-8")
+                        img(src="/car.jpg" alt="Car image" class="img-fluid")
+                    div(class="col-5 col-sm-4")
+                        div(class="card-body")
+                            h5(class="card-title") Featured Vehicle 
+                            p(class="card-text")
+                            button(id="order-1" class="btn btn-primary") Order this Vehicle
+        div(class="container m-5")
+            div(class="card")
+                div(class="row")
+                    div(class="col-7 col-sm-8")
+                        img(src="/van.jpg" alt="Van image" class="img-fluid")
+                    div(class="col-5 col-sm-4")
+                        div(class="card-body")
+                            h5(class="card-title") Featured Vehicle 
+                            p(class="card-text")
+                            button(id="order-2" class="btn btn-primary") Order this Vehicle
+        div(class="container m-5")
+            div(class="card")
+                div(class="row")
+                    div(class="col-7 col-sm-8")
+                        img(src="/bus.jpg" alt="Bus image" class="img-fluid")
+                    div(class="col-5 col-sm-4")
+                        div(class="card-body")
+                            h5(class="card-title") Featured Vehicle 
+                            p(class="card-text")
+                            button(id="order-3" class="btn btn-primary") Order this Vehicle
+        div(class="container m-5")
+            div(class="card")
+                div(class="row")
+                    div(class="col-7 col-sm-8")
+                        img(src="/truck.jpg" alt="Truck image" class="img-fluid")
+                    div(class="col-5 col-sm-4")
+                        div(class="card-body")
+                            h5(class="card-title") Featured Vehicle 
+                            p(class="card-text")
+                            button(id="order-4" class="btn btn-primary") Order this Vehicle
+            
