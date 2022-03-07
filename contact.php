@@ -21,16 +21,16 @@
         <div class="collapse navbar-collapse" id="navbarLinks">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a href="index.php" class="nav-link">Home</a>
+                    <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="aboutus.php" class="nav-link">About Us</a>
+                    <a href="aboutus" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="ordertaxi.php" class="nav-link">Taxi</a>
+                    <a href="ordertaxi" class="nav-link">Taxi</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.php" class="nav-link">Contact</a>
+                    <a href="contact" class="nav-link">Contact</a>
                 </li>
             </ul>
         </div>

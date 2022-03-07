@@ -13,7 +13,7 @@ async function homeTest(){
                                 .setFirefoxOptions(new firefox.Options().headless())
                                 .build();
 
-    await driver.get('http://127.0.0.1/index.php');
+    await driver.get('http://127.0.0.1/');
 
     let found = await driver.findElement(By.id("DateTime"));
 
@@ -25,7 +25,7 @@ async function aboutTest(){
                                 .setFirefoxOptions(new firefox.Options().headless())                            
                                 .build();
 
-    await driver.get('http://127.0.0.1/aboutus.php');
+    await driver.get('http://127.0.0.1/aboutus');
     
     let welcome = await driver.findElement(By.id("Welcome"));
     let welcomeText = await welcome.getText();
@@ -44,7 +44,7 @@ async function ordertaxiTest(){
                                 .setFirefoxOptions(new firefox.Options().headless())                            
                                 .build();
 
-    await driver.get('http://127.0.0.1/ordertaxi.php');
+    await driver.get('http://127.0.0.1/ordertaxi');
 
     id1 = await driver.findElement(By.id('order-1'));
     id2 = await driver.findElement(By.id('order-2'));
@@ -64,7 +64,7 @@ async function contactTest(){
                                 .setFirefoxOptions(new firefox.Options().headless())                            
                                 .build();
 
-    await driver.get('http://127.0.0.1/contact.php');
+    await driver.get('http://127.0.0.1/contact');
 
     let form = await driver.findElement(By.css('form'));
     let name = await driver.findElement(By.css('#Name'));
