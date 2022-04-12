@@ -44,7 +44,15 @@ server1.get('/ordertaxi', function (req, res, next) {
 });
 server1.get('/contact', function (req, res, next) {
     try {
-        res.render('contact', { title: 'Taxi server1 Assignment - Contact'});
+        res.render('contact', { title: 'Taxi App Assignment - Contact'});
+
+    } catch (e) { 
+        next(e);
+    }
+});
+server1.get('/rides', function (req, res, next) {
+    try {
+        res.render('rides', { title: 'Taxi App Assignment - Pending Rides'});
 
     } catch (e) { 
         next(e);
@@ -85,7 +93,15 @@ server2.get('/ordertaxi', function (req, res, next) {
 });
 server2.get('/contact', function (req, res, next) {
     try {
-        res.render('contact', { title: 'Taxi server1 Assignment - Contact'});
+        res.render('contact', { title: 'Taxi App Assignment - Contact'});
+
+    } catch (e) { 
+        next(e);
+    }
+});
+server2.get('/rides', function (req, res, next) {
+    try {
+        res.render('rides', { title: 'Taxi App Assignment - Pending Rides'});
 
     } catch (e) { 
         next(e);
@@ -126,7 +142,15 @@ server3.get('/ordertaxi', function (req, res, next) {
 });
 server3.get('/contact', function (req, res, next) {
     try {
-        res.render('contact', { title: 'Taxi server1 Assignment - Contact'});
+        res.render('contact', { title: 'Taxi App Assignment - Contact'});
+
+    } catch (e) { 
+        next(e);
+    }
+});
+server3.get('/rides', function (req, res, next) {
+    try {
+        res.render('rides', { title: 'Taxi App Assignment - Pending Rides'});
 
     } catch (e) { 
         next(e);
@@ -167,7 +191,15 @@ server4.get('/ordertaxi', function (req, res, next) {
 });
 server4.get('/contact', function (req, res, next) {
     try {
-        res.render('contact', { title: 'Taxi server1 Assignment - Contact'});
+        res.render('contact', { title: 'Taxi App Assignment - Contact'});
+
+    } catch (e) { 
+        next(e);
+    }
+});
+server4.get('/rides', function (req, res, next) {
+    try {
+        res.render('rides', { title: 'Taxi App Assignment - Pending Rides'});
 
     } catch (e) { 
         next(e);
@@ -208,7 +240,15 @@ server5.get('/ordertaxi', function (req, res, next) {
 });
 server5.get('/contact', function (req, res, next) {
     try {
-        res.render('contact', { title: 'Taxi server1 Assignment - Contact'});
+        res.render('contact', { title: 'Taxi App Assignment - Contact'});
+
+    } catch (e) { 
+        next(e);
+    }
+});
+server5.get('/rides', function (req, res, next) {
+    try {
+        res.render('rides', { title: 'Taxi App Assignment - Pending Rides'});
 
     } catch (e) { 
         next(e);
