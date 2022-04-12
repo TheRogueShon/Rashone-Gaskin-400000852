@@ -26,7 +26,6 @@ async function requestVehicleTest(){
 
     
     await driver.get("http://127.0.0.1/rides");
-    await driver.manage().setTimeouts( { implicit: 10000 } );
     let div = await driver.findElements(By.css('col-3'));
     for(let e of div){
         console.log(div);
