@@ -7,7 +7,7 @@ async function runTests(){
 
 async function requestVehicleTest(){
     let driver = new Builder().forBrowser('firefox')
-                                .setFirefoxOptions(new firefox.Options())
+                                .setFirefoxOptions(new firefox.Options().headless())
                                 .build();
 
     await driver.get('http://127.0.0.1/ordertaxi');
@@ -30,62 +30,7 @@ async function requestVehicleTest(){
     for(let e of div){
         console.log(div);
     }
-    //await driver.quit(); 
-}
-
-async function acceptOrderTest(){
-    let driver = new Builder().forBrowser('firefox')
-                                .setFirefoxOptions(new firefox.Options().headless())                            
-                                .build();
-
-    await driver.get('http://127.0.0.1/aboutus');
-    
-    let welcome = await driver.findElement(By.id("Welcome"));
-    let welcomeText = await welcome.getText();
-    if(welcomeText == 'Welcome to islandMovers'){
-        console.log("Text found");
-    }
-    else{
-        console.log("Text not found");
-    }
-
-    await driver.quit();
-}
-
-async function ordertaxiTest(){
-    let driver = new Builder().forBrowser('firefox')
-                                .setFirefoxOptions(new firefox.Options().headless())                            
-                                .build();
-
-    await driver.get('http://127.0.0.1/ordertaxi');
-
-    id1 = await driver.findElement(By.id('order-1'));
-    id2 = await driver.findElement(By.id('order-2'));
-    id3 = await driver.findElement(By.id('order-3'));
-    id4 = await driver.findElement(By.id('order-4'));
-    
-    
-    carImage = await driver.findElement(By.xpath("//img[@alt='Car image']"));
-    vanImage = await driver.findElement(By.xpath("//img[@alt='Van image']"));
-    busImage = await driver.findElement(By.xpath("//img[@alt='Bus image']"));
-    truckImage = await driver.findElement(By.xpath("//img[@alt='Truck image']"));
-    await driver.quit();
-}
-
-async function contactTest(){
-    let driver = new Builder().forBrowser('firefox')
-                                .setFirefoxOptions(new firefox.Options().headless())                            
-                                .build();
-
-    await driver.get('http://127.0.0.1/contact');
-
-    let form = await driver.findElement(By.css('form'));
-    let name = await driver.findElement(By.css('#Name'));
-    let query = await driver.findElement(By.css('#Query'))
-    let submit = await driver.findElement(By.css('#submitQuery'));
-    
-    await submit.click();
-    await driver.quit();
+    await driver.quit(); 
 }
 
 runTests();
